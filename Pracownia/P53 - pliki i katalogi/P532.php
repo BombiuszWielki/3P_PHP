@@ -6,4 +6,9 @@ FORMUŁA SPOTKANIA NIE JEST ZAMKNIĘTA – KAŻDY MOŻE PRZYŁĄCZYĆ SIĘ DO CZ
 
 touch("narodoweCzytanie.txt");
 file_put_contents("narodoweCzytanie.txt",$text);
-echo readfile("narodoweCzytanie.txt");
+czytaj();
+
+function czytaj()
+{
+    echo readfile("narodoweCzytanie.txt");
+}
