@@ -18,8 +18,11 @@ if (isset($_POST['komentarz'])) {
 <head>
     <title>Opinie użytkowników</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h1>Zadanie T56</h1>
+<h2>Autor: Fabian Latosiński 3P_1</h2>
 <div>
     <form action="index.php" method="post">
         <p><b>Dodaj swój komentarz na temat globalnego ocieplenia</b><br>(Maksymalnie 255 znaków)</p>
