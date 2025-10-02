@@ -1,0 +1,13 @@
+<?php
+//POTRZEBA: imie, nazwisko, stanowisko gdzie wynagrodzenie > 90000
+
+$db = mysqli_connect("localhost", "root", "", "3i_1_baza1");
+$q = "SELECT imie, nazwisko, stanowisko FROM pracownicy WHERE wynagrodzenie > 90000";
+$wynik = mysqli_query($db, $q);
+
+while($el = mysqli_fetch_row($wynik))
+{
+    echo $el[0]." ".$el[1]." ".$el[2]."<br>";
+}
+
+mysqli_close($db);
