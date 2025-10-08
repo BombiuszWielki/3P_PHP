@@ -42,8 +42,7 @@ if (isset($_POST['zaladuj']))
     $db = mysqli_connect('localhost', 'root', '', '3p_1_baza_pracownikow');
 
     $content = @file_get_contents('pracownicy.txt');
-    $cleaned_content = preg_replace('/\\s*/', '', $content);
-    $lines = array_filter(explode("\n", $cleaned_content), 'trim');
+    $lines = array_filter(explode("\n", $content), 'trim');
     $employees = [];
     $current_id = null;
     $current_data = "";
@@ -71,7 +70,7 @@ if (isset($_POST['zaladuj']))
         if (preg_match('/^(\w+\s+\w+)\s+(.+?)\s+([A-Za-zęłóśźżń-]+)\s+([A-Za-zęłóśźżń-]+)$/u', $data_string, $fields))
         {
 
-            list($nazwisko, $imie) = explode('\t', $fields[1], 2);
+            list($nazwisko, $imie) = explode(' ', $fields[1], 2);
 
             $stanowisko = trim($fields[2]);
             $dzial = trim($fields[3]);

@@ -1,21 +1,15 @@
-/* style.css */
-
-/* --- PODSTAWOWE USTAWIENIA --- */
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9; /* Jasnoszary/niebieskawy dla tła */
-    color: #333; /* Ciemny tekst dla czytelności */
+    background-color: #f4f7f9;
+    color: #333;
     margin: 40px;
     padding: 0;
     line-height: 1.6;
 }
 
-/* --- NAGŁÓWKI --- */
-
 h1 {
-    color: #004d99; /* Ciemny niebieski */
-    border-bottom: 3px solid #007bff; /* Linia podkreślająca */
+    color: #004d99;
+    border-bottom: 3px solid #007bff;
     padding-bottom: 10px;
     margin-bottom: 5px;
 }
@@ -28,21 +22,19 @@ h2 {
 }
 
 h3 {
-    color: #007bff; /* Podkreślenie sekcji z danymi */
+    color: #007bff;
     margin-top: 30px;
     border-left: 5px solid #007bff;
     padding-left: 10px;
 }
 
-/* --- FORMULARZ I PRZYCISKI --- */
-
 form {
     margin: 20px 0;
     padding: 15px;
-    background-color: #e9ecef; /* Lekkie tło dla sekcji formularza */
+    background-color: #e9ecef;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: flex; /* Układanie przycisków w linii */
+    display: flex;
     gap: 10px;
 }
 
