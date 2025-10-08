@@ -1,0 +1,115 @@
+NNuummeerr iidd.. NNaazzwwiisskkooIImmii?ę SSttaannoowwiisskkoo DDzziiaa?łSSeekkccjjaa
+1975Frankowski Leon Asyst. Księg. Księgowość kopiarki
+1976PietrzakRobert  St. Asyst. Admin.Inż.-Tech. drukarki
+1977Adamiak Tomasz  St. Asyst. Admin.Inż.-Tech. faksy
+1978Dorg JarekInżynier informatyk Inż.-Tech. kopiarki
+1979BerwickiSam  Sprzedawca Marketing  kopiarki
+1980Miller  Urszula KsięgowyKsięgowość kopiarki
+1981Ruda Felicja Asyst. Admin. Admin.  kopiarki
+1982Welicki JarekAsyst. Admin. Admin.  kopiarki
+1983KaniaSławek  Asyst. Projekt.  Reklama drukarki
+1984Czowski Robert  Asyst. Projekt.  Reklama faksy
+1985Lin  Michał  Inżynier informatyk Inż.-Tech. faksy
+1986AlkowskiDariusz Asyst. Tech.  Inż.-Tech. faksy
+1987Martin  Sara Sprzedawca Marketing  kopiarki
+1988Miller  Janina  Sprzedawca Marketing  kopiarki
+1989LeskiEryk AnalitykMagazyn faksy
+1990Abramowicz BolekAsyst. Admin. Admin.  faksy
+1991BatonIlonaProjektant Reklama kopiarki
+1992GoldbergMariaSprzedawca Marketing  faksy
+1993LanikPiotrSprzedawca Marketing  faksy
+1994StawickiKarolAsyst. Admin. Admin.  drukarki
+1995Smok Honoriusz  Asyst. Projekt.  Reklama kopiarki
+1996Maczek  MariaProjektant Reklama kopiarki
+1997Keln Tomasz  Asyst. Admin. Inż.-Tech. drukarki
+1998Silwer  Jan  Inżynier proj.Inż.-Tech. faksy
+1999Albert  Max  St. Asyst. Admin.Marketing  kopiarki
+2000Lemska  Aleksandra AnalitykMagazyn kopiarki
+2001Coniak  Lida Asyst. Admin. Admin.  faksy
+2002ReskiFilipKsięgowyKsięgowość drukarki
+2003Henczak MarekAsyst. Księg. Księgowość drukarki
+2004FonieckiJan  St. Asyst. Admin.Księgowość kopiarki
+2005PlanczakAlan St. Asyst. Admin.Księgowość drukarki
+2006Miller  Krzysztof  Asyst. Admin. Admin.  faksy
+2007Batecka Liza Asyst. Admin. Admin.  kopiarki
+2008AlskaIzolda  Technik Inż.-Tech. faksy
+2009DawidKarenTechnik Inż.-Tech. drukarki
+2010Szczygieł  Tadeusz Technik Inż.-Tech. kopiarki
+2011Sikora  Sandra  Asyst. Tech.  Inż.-Tech. kopiarki
+2012Siwicki RadekAsyst. Admin. Marketing  faksy
+2013Chojnacki  Stefan  St. Asyst. Admin.Marketing  drukarki
+2014Sawicka Ewelina Sprzedawca Marketing  kopiarki
+2015TerewiczRobert  St. Asyst. Admin.Magazyn drukarki
+2016KanekMirekSt. Asyst. Admin.Magazyn faksy
+2017Sanicka Anna KsięgowyKsięgowość kopiarki
+2018BorowskiFranek  Asyst. Księg. Księgowość faksy
+2019Gordon  Halina  Asyst. Księg. Księgowość kopiarki
+2020MelenJustyna St. Asyst. Admin.Księgowość faksy
+2021Prenak  Liza Inżynier mechanikInż.-Tech. drukarki
+2022Czowska MariaInżynier informatyk Inż.-Tech. drukarki
+2023Szczygieł  Halina  Technik Inż.-Tech. faksy
+2024NowakTomasz  Technik Inż.-Tech. drukarki
+2025KowalskaNatalia Sprzedawca Marketing  drukarki
+2026WejnoRóża KsięgowyKsięgowość drukarki
+2027BieleckiTom  Asyst. Księg. Księgowość drukarki
+2028BorekKarenMenedżerInż.-Tech. drukarki
+2029Wnuk DenisInżynier informatyk Inż.-Tech. kopiarki
+2030Siwicki Leszek  Inżynier informatyk Inż.-Tech. drukarki
+2031KomarTeodor  Asyst. Admin. Marketing  kopiarki
+2032Prosty  Helena  Asyst. Admin. Admin.  drukarki
+2033Branek  Amelia  Projektant Reklama drukarki
+2034DmochSylwia  Asyst. Admin. Inż.-Tech. kopiarki
+2035KenigPamela  Asyst. Admin. Inż.-Tech. faksy
+2036Alecka  StefaniaInżynier proj.Inż.-Tech. drukarki
+2037Wolf Iza  Inżynier mechanikInż.-Tech. kopiarki
+2038Halski  KarolAsyst. Admin. Marketing  drukarki
+2039Taczek  RadekMenedżerMarketing  drukarki
+2040BieleckiFranek  Sprzedawca Marketing  faksy
+2041JaworskiDarekSt. Asyst. Admin.Magazyn kopiarki
+2042SkałaGrażyna Projektant Reklama faksy
+2043Mann Alicja  Inżynier mechanikInż.-Tech. drukarki
+2044Szczygieł  Witold  Asyst. Tech.  Inż.-Tech. drukarki
+2045Fryzjer Liza Sprzedawca Marketing  faksy
+2046RowalBożena  KsięgowyKsięgowość faksy
+2047Nelson  Edward  Projektant Reklama faksy
+2048RawinAlicja  St. Asyst. Admin.Inż.-Tech. kopiarki
+2049Welski  Sam  St. Inżynier  Inż.-Tech. faksy
+2050Glad WeronikaInżynier informatyk Inż.-Tech. faksy
+2051TupakAnna Technik Inż.-Tech. drukarki
+2052Bankier Renata  Asyst. Admin. Marketing  drukarki
+2053HomerMirekSt. Asyst. Admin.Marketing  drukarki
+2054Morton  Sara Sprzedawca Marketing  drukarki
+2055KamińskaCzesławaTechnik Magazyn drukarki
+2056WujekTaniaAsyst. Admin. Admin.  faksy
+2057Ferczyk KarolinaMenedżerInż.-Tech. kopiarki
+2058BartczakSandra  MenedżerMagazyn faksy
+2059TowińskaEwa  AnalitykMagazyn drukarki
+2060ZostockaMelisa  DyrektorAdmin.  faksy
+2061Fermer  JulekSt. Inżynier  Inż.-Tech. drukarki
+2062JaworskaLiza Asyst. Tech.  Inż.-Tech. drukarki
+2063Harczak Bartek  Asyst. Menedż.Magazyn drukarki
+2064Piotrowski DawidAsyst. Menedż.Magazyn kopiarki
+2065Kolicki BolekAsyst. Admin. Admin.  drukarki
+2066Seweryn Mateusz Sprzedawca Marketing  drukarki
+2067HockaAleksandra MenedżerAdmin.  drukarki
+2068Bergen  Bożena  Asyst. Menedż.Inż.-Tech. faksy
+2069SofińskiArielSt. Inżynier  Inż.-Tech. drukarki
+2070Salomon Aram Inżynier informatyk Inż.-Tech. kopiarki
+2071Larkin  Donald  Inżynier informatyk Inż.-Tech. drukarki
+2072Półkowicz  Robert  Inżynier mechanikInż.-Tech. faksy
+2073Kraczyk PiotrTechnik Inż.-Tech. drukarki
+2074Farmer  Sam  MenedżerMarketing  kopiarki
+2075Samion  MarekSprzedawca Marketing  drukarki
+2076Fosz Feliks  AnalitykMagazyn drukarki
+2077LarekErykaSzef biura Admin.  drukarki
+2078Seweryn Ryszard St. Menedżer  Marketing  faksy
+2079Samiak  KarolSprzedawca Marketing  kopiarki
+2080Kortowski  Czarek  Sprzedawca Marketing  kopiarki
+2081Wesoły  MarekSprzedawca Marketing  drukarki
+2082MalikHelena  KsięgowyKsięgowość faksy
+2083JanowskiMichał  St. Inżynier  Inż.-Tech. faksy
+2084BerekZuzanna St. Inżynier  Inż.-Tech. kopiarki
+2085Wolska  Helena  Sprzedawca Marketing  drukarki
+2086Makarek KrystynaGłówny Inżynier  Inż.-Tech. kopiarki
+2087Adamska KasiaInżynier mechanikInż.-Tech. kopiarki
+2088Gonczyk Jan  St. Menedżer  Admin.  kopiarki
