@@ -38,15 +38,14 @@ if(isset($_POST["wyswietl"]))
     $w = mysqli_query($db, $q);
 
     echo "<h3>Dane z tabeli:</h3>";
-    echo "<table><tr><th>identyfikator</th><th>Imię</th><th>Nazwisko</th><th>Email<th></tr></table>";
-    echo"<table>";
-    while ($row = mysqli_fetch_assoc($w))
+    echo "<table border='1'><tr><th>identyfikator</th><th>Imię</th><th>Nazwisko</th><th>Email</th></tr>";
+    while ($row = mysqli_fetch_row($w))
     {
         echo "<tr>";
-        echo "<td>" . htmlspecialchars($w['identyfikator']) . "</td>";
-        echo "<td>" . htmlspecialchars($w['imie']) . "</td>";
-        echo "<td>" . htmlspecialchars($w['nazwisko']) . "</td>";
-        echo "<td>" . htmlspecialchars($w['email']) . "</td>";
+        echo "<td>" . $row[0] . "</td>";
+        echo "<td>" . $row[1] . "</td>";
+        echo "<td>" . $row[2] . "</td>";
+        echo "<td>" . $row[3] . "</td>";
         echo "</tr>";
     }
     echo "</table>";
