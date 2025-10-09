@@ -20,10 +20,10 @@ if(isset($_POST["zaladuj"]))
     while(!feof($file))
     {
         $line = fgets($file);
-        $lines = trim($line, " ");
+        $lines = explode(" ", $line);
 
         $q = "INSERT INTO tabela_1(identyfikator, imie, nazwisko, email)
-            VALUES(${$lines[0]}, ${$lines[1]}, ${$lines[2]}, ${$lines[3]});";
+            VALUES('{$lines[0]}', '{$lines[1]}', '{$lines[2]}', '{$lines[3]}');";
         mysqli_query($db, $q);
     }
 
@@ -33,7 +33,6 @@ if(isset($_POST["zaladuj"]))
 if(isset($_POST["wyswietl"]))
 {
     $db = mysqli_connect("localhost","root","","3p_1_pacjenci");
-    $file = fopen("dane.txt", "r");
 
     $q = "SELECT * FROM tabela_1";
     $w = mysqli_query($db, $q);
@@ -52,7 +51,6 @@ if(isset($_POST["wyswietl"]))
     }
     echo "</table>";
 
-    fclose($file);
     mysqli_close($db);
 }
 
