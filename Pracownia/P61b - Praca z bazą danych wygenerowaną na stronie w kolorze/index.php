@@ -10,6 +10,15 @@
 <body>
 <h1>Zadanie P61b - Praca z bazą danych wygenerowaną na stronie w kolorze</h1>
 <h2>Autor: Fabian Latosiński 3P_1</h2>
+<p>Korzystając ze strony https://mockaroo.com/ wygeneruj w SQL następujące dane 50 pracowników:<br>
+    id<br>
+    first_name<br>
+    last_name<br>
+    email<br>
+    gender<br>
+    ip_address<br>
+    color<br>
+    Wartość color powinna być wyrażona w liczbie szesnastkowej.</p>
 <?php
 $db = mysqli_connect("localhost", "root", "", "3p_01_pracownicy_w_kolorze");
 $q = "SELECT * FROM 3p_01_pracownicy_w_kolorze";
