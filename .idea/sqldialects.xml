@@ -4,5 +4,7 @@
     <file url="file://$PROJECT_DIR$/Pracownia/P61a- pacjenci php z bazą danych i plikiem tekstowym/3p_1_pacjenci.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/Pracownia/P61b - Praca z bazą danych wygenerowaną na stronie w kolorze/3p_01_pracownicy_w_kolorze (1).sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/Pracownia/P61b - Praca z bazą danych wygenerowaną na stronie w kolorze/3p_01_pracownicy_w_kolorze.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Tematy/T62 - zastosowanie biblioteki PDO/3p1_biblioteka.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Tematy/T62 - zastosowanie biblioteki PDO/biblioteka.sql" dialect="GenericSQL" />
   </component>
 </project>
