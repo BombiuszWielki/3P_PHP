@@ -44,6 +44,8 @@ if(isset($_POST["d1"]) && isset($_POST["m1"]) && isset($_POST["y1"]) && isset($_
             echo "Data 1 ($d1-$m1-$y1) jest wcześniejsza";
         elseif($p1 > $p2)
             echo "Data 2 ($d2-$m2-$y2) jest wcześniejsza";
+        else
+            echo "Obie daty ($d1-$m1-$y1 i $d2-$m2-$y2) są równe";
     }
     else
     {
