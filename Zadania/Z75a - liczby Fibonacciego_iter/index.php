@@ -23,17 +23,24 @@
     if(isset($_POST['n']))
     {
         $n = $_POST['n'];
-        $x1 = 0;
-        $x2 = 1;
-
-        echo "F(0) = 0<br>";
-        echo "F(1) = 1<br>";
-        for($i=1; $i<=$n; $i++)
+        if ($n >= 1)
         {
-            echo "F($i) = $x2<br>";
-            $x1 = $x2+$x1;
-            $x2 = $x1+$x2;
+            $x1 = 0;
+            $x2 = 1;
+
+            echo "F(0) = 0<br>";
+            echo "F(1) = 1<br>";
+
+            for($i=2; $i<=$n; $i++)
+            {
+                $x3 = $x1 + $x2;
+                echo "F($i) = $x3<br>";
+                $x1 = $x2;
+                $x2 = $x3;
+            }
         }
+        else
+            echo "Podaj liczbę dodatnią!";
     }
     ?>
 </div>
