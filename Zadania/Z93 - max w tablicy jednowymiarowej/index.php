@@ -27,7 +27,7 @@
         for($i = 0; $i < sizeof($li); $i++)
         {
             echo $li[$i].", ";
-            if(!is_numeric($li[$i]))
+            if(!is_numeric($li[$i]) || is_float($li[$i]))
                 $czyZgadzajaSie = false;
         }
         echo "<br>";
@@ -49,7 +49,7 @@
             echo "Ilość elementów tablicy: $ile<br>Maksymalna wartość w tablicy: $max";
         }
         else
-            echo "Rezultat: Wszystkie wartości muszą być liczbami całkowitymi. Przynajmniej jedna wartość nie jest liczbą całkowitą.";
+            echo "Wszystkie wartości muszą być liczbami całkowitymi. Przynajmniej jedna wartość nie jest liczbą całkowitą.";
     }
     ?>
 </div>
