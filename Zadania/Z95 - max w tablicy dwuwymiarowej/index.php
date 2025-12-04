@@ -57,17 +57,21 @@
                         echo "Tablica $n x $m:<br>";
                         static $x = 0;
                         $max = -1;
+
+                        echo "<table border='1'>";
                         for($i = 0; $i < $m; $i++)
                         {
+                            echo "<tr>";
                             for ($j = 0; $j < $n; $j++)
                             {
-                                echo $liczby[$x]." ";
+                                echo "<td>$liczby[$x]</td>";
                                 if($liczby[$x]>$max)
                                     $max = $liczby[$x];
                                 $x++;
                             }
-                            echo "<br>";
+                            echo "</tr>";
                         }
+                        echo "</table>";
                         echo "Maksymalna wartość w tablicy: $max<br>";
                     }
                 }
