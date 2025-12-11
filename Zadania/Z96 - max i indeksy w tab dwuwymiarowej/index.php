@@ -20,13 +20,13 @@
 </form>
 <div id="res">
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $n = $_POST['n'];
         $m = $_POST['m'];
         $liczby_ = $_POST['liczby'];
 
-        if (!is_numeric($n) || !is_numeric($m))
+        if(!is_numeric($n) || !is_numeric($m))
             echo "Wymiary n i m muszą być dodatnimi liczbami całkowitymi.";
         else
         {
@@ -38,9 +38,9 @@
             $razemIle = $n * $m;
             $liSieZgadzaja = true;
 
-            foreach ($liczby as $key => $wartosc)
+            foreach($liczby as $key => $wartosc)
             {
-                if (filter_var($wartosc, FILTER_VALIDATE_INT) === false)
+                if(filter_var($wartosc, FILTER_VALIDATE_INT) === false)
                 {
                     $liSieZgadzaja = false;
                     break;
@@ -48,9 +48,9 @@
                 $liczby[$key] = (int)$wartosc;
             }
 
-            if (!$liSieZgadzaja)
+            if(!$liSieZgadzaja)
                 echo "Wszystkie podane wartości muszą być liczbami całkowitymi.";
-            else if ($dlugoscLi != $razemIle)
+            else if($dlugoscLi != $razemIle)
                 echo "Błędna ilość elementów. Oczekiwano $razemIle, otrzymano $dlugoscLi.";
             else
             {
@@ -63,21 +63,21 @@
 
                 echo "<table border='1'>";
 
-                for ($i = 0; $i < $n; $i++)
+                for($i = 0; $i < $n; $i++)
                 {
                     echo "<tr>";
-                    for ($j = 0; $j < $m; $j++)
+                    for($j = 0; $j < $m; $j++)
                     {
                         $wartosc = $liczby[$indeksLi];
                         $tabelaLi[$i][$j] = $wartosc;
 
-                        if ($wartosc > $max)
+                        if($wartosc > $max)
                         {
                             $max = $wartosc;
                             $IndeksyMax = array();
                             $IndeksyMax[] = "[$i, $j]";
                         }
-                        elseif ($wartosc == $max)
+                        else if($wartosc == $max)
                             $IndeksyMax[] = "[$i, $j]";
 
                         echo "<td>" . htmlspecialchars($wartosc) . "</td>";
