@@ -20,83 +20,76 @@
 </form>
 <div id="res">
     <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $n = $_POST['n'];
         $m = $_POST['m'];
-        $liczby = explode(',', $_POST['liczby']);
+        $liczby_ = $_POST['liczby'];
 
-        if(is_numeric($n))
+        if (!is_numeric($n) || !is_numeric($m))
+            echo "Wymiary n i m muszą być dodatnimi liczbami całkowitymi.";
+        else
         {
-            echo "Wymiary tablicy: $n x $m<br>";
-            echo "Wprowadzane liczby: ";
-            for ($i = 0; $i < sizeof($liczby); $i++)
-                echo $liczby[$i] . ", ";
-            echo "<br>";
-            $n = intval($n);
-            $m = intval($m);
+            $liczby = explode(',', $liczby_);
+            $liczby = array_map('trim', $liczby);
+            $liczby = array_filter($liczby, 'strlen');
+
+            $dlugoscLi = count($liczby);
+            $razemIle = $n * $m;
             $liSieZgadzaja = true;
 
-            if($n > 0 && $n < 100 && $m > 0 && $m < 100)
+            foreach ($liczby as $key => $wartosc)
             {
-                for ($i = 0; $i < sizeof($liczby); $i++)
-                    if (!is_numeric($liczby[$i]))
-                    {
-                        $liSieZgadzaja = false;
-                        break;
-                    }
-
-                if(!$liSieZgadzaja)
-                    echo "Wpisano niepoprawne wartości.\n";
-                else
+                if (filter_var($wartosc, FILTER_VALIDATE_INT) === false)
                 {
-                    if(count($liczby) !== $n*$m)
-                        echo "Błędna ilość elementów.\n";
-                    else
-                    {
-                        echo "Tablica $n x $m:<br>";
-                        static $x = 0;
-                        $max = -1;
-
-                        echo "<table border='1'>";
-                        for($i = 0; $i < $m; $i++)
-                        {
-                            echo "<tr>";
-                            for ($j = 0; $j < $n; $j++)
-                            {
-                                echo "<td>$liczby[$x]</td>";
-                                if($liczby[$x]>$max)
-                                    $max = $liczby[$x];
-                                $x++;
-                            }
-                            echo "</tr>";
-                        }
-                        echo "</table>";
-
-                        $lichoczby = array();
-                        $indeksy = array();
-                        static $y = 0;
-                        for ($i = 0; $i < $n; $i++)
-                        {
-                            for ($j = 0; $j < $m; $j++)
-                            {
-                                $lichoczby[$n][$m] = $liczby[$y];
-                                $y++;
-                            }
-                        }
-
-                        for($i=0; $i<$n; $i++)
-                        {
-                            for($j=0; $j<$m; $j++)
-                            {
-                                if($lichoczby[$j][$m] == $max)
-                                    $indeksy[$i] = array_search($lichoczby[$j][$m]);
-                            }
-                        }
-
-                        echo "Maksymalna wartość w tablicy: $max<br>";
-                    }
+                    $liSieZgadzaja = false;
+                    break;
                 }
+                $liczby[$key] = (int)$wartosc;
+            }
+
+            if (!$liSieZgadzaja)
+                echo "Wszystkie podane wartości muszą być liczbami całkowitymi.";
+            else if ($dlugoscLi != $razemIle)
+                echo "Błędna ilość elementów. Oczekiwano $razemIle, otrzymano $dlugoscLi.";
+            else
+            {
+                echo "<p> Wyniki dla tablicy $n x $m:</p>";
+
+                $tabelaLi = array();
+                $indeksLi = 0;
+                $max = -999;
+                $IndeksyMax = array();
+
+                echo "<table border='1'>";
+
+                for ($i = 0; $i < $n; $i++)
+                {
+                    echo "<tr>";
+                    for ($j = 0; $j < $m; $j++)
+                    {
+                        $wartosc = $liczby[$indeksLi];
+                        $tabelaLi[$i][$j] = $wartosc;
+
+                        if ($wartosc > $max)
+                        {
+                            $max = $wartosc;
+                            $IndeksyMax = array();
+                            $IndeksyMax[] = "[$i, $j]";
+                        }
+                        elseif ($wartosc == $max)
+                            $IndeksyMax[] = "[$i, $j]";
+
+                        echo "<td>" . htmlspecialchars($wartosc) . "</td>";
+
+                        $indeksLi++;
+                    }
+                    echo "</tr>";
+                }
+                echo "</table>";
+
+                echo "<p>Maksymalna wartość w tablicy: <strong>$max</strong></p>";
+                echo "<p>Indeksy elementów o maksymalnej wartości: <strong>" . implode(', ', $IndeksyMax) . "</strong></p>";
             }
         }
     }
