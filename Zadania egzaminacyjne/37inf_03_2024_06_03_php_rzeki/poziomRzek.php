@@ -67,6 +67,7 @@
     </table>
 </div>
 <div id="blokPrawy">
+    <h3>Informacje</h3>
     <ul>
         <li>Brak ostrzeżeń o burzach z gradem</li>
         <li>Smog w mieście Wrocław</li>
