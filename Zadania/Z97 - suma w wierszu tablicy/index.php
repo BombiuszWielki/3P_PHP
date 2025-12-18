@@ -23,76 +23,88 @@
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        $n = $_POST['n'];
-        $m = $_POST['m'];
-        $liwier = $_POST['liwier'];
-        $liczby = explode(',', $_POST['liczby']);
+        $n_ = $_POST['n'];
+        $m_ = $_POST['m'];
+        $liwier_ = $_POST['liwier'];
+        $liczby = array_map('trim', explode(',', $_POST['liczby']));
 
-        if(is_numeric($n))
+        $walidacja_ok = true;
+
+        if((!ctype_digit($n_) || (int)$n_ <= 0) || (!ctype_digit($m_) || (int)$m_ <= 0) || !ctype_digit($liwier_))
         {
-            echo "Wymiary tablicy: $n x $m<br>";
-            echo "Wprowadzane liczby: ";
-            for ($i = 0; $i < sizeof($liczby); $i++)
-                echo $liczby[$i] . ", ";
-            echo "<br>";
-            $n = intval($n);
-            $m = intval($m);
-            $liSieZgadzaja = true;
+            echo "Wszystkie dane muszą być liczbami całkowitymi dodatnimi<br>";
+            $walidacja_ok = false;
+        }
 
-            if($liwier>=0 && $liwier<$n)
+        if($walidacja_ok)
+        {
+            $n = intval($n_);
+            $m = intval($m_);
+            $liwier = (int)$liwier_;
+            $ileTrzebaLiczb = $n * $m;
+
+            if($liwier < 0 || $liwier >= $n)
             {
-                for ($i = 0; $i < sizeof($liczby); $i++)
-                    if (!is_numeric($liczby[$i]))
-                    {
-                        $liSieZgadzaja = false;
-                        break;
-                    }
+                echo "Numer wiersza musi być w zakresie od 0 do " . ($n - 1) . ".<br>";
+                $walidacja_ok = false;
+            }
 
-                $lichoczby = array();
-                static $y = 0;
-                for ($i = 0; $i < $n; $i++)
+            $liczba_elementow = count($liczby);
+            if($liczba_elementow != $ileTrzebaLiczb) {
+                echo "Podano $liczba_elementow elementów, wymagane jest $ileTrzebaLiczb.<br>";
+                $walidacja_ok = false;
+            }
+
+            $tablica = array();
+            $indeksLichy = 0;
+            $wszystkie_liczby = true;
+
+            if($walidacja_ok)
+            {
+                for($i = 0; $i < $n; $i++)
                 {
-                    for ($j = 0; $j < $m; $j++)
+                    $tablica[$i] = array();
+                    for($j = 0; $j < $m; $j++)
                     {
-                        $lichoczby[$n][$m] = $liczby[$y];
-                        $y++;
+                        $element = $liczby[$indeksLichy];
+                        if(!is_numeric($element))
+                        {
+                            echo "Element '$element' nie jest poprawną liczbą.<br>";
+                            $wszystkie_liczby = false;
+                            break 2;
+                        }
+                        $tablica[$i][$j] = floatval($element);
+                        $indeksLichy++;
                     }
                 }
 
-                if(!$liSieZgadzaja)
-                    echo "Wpisano niepoprawne wartości.\n";
-                else
+                if($wszystkie_liczby)
                 {
-                    if(count($liczby) !== $n*$m)
-                        echo "Błędna ilość elementów.\n";
-                    else
+                    echo "Wymiary tablicy: $n x $m<br>";
+                    echo "Wybrany wiersz: $liwier<br>";
+
+                    echo "<p>Tablica wejściowa ($n x $m):</p>";
+                    echo "<table border='1'>";
+                    for($i = 0; $i < $n; $i++)
                     {
-                        echo "Tablica $n x $m:<br>";
-                        static $x = 0;
-
-                        echo "<table border='1'>";
-                        for($i = 0; $i < $m; $i++)
+                        echo "<tr>";
+                        for($j = 0; $j < $m; $j++)
                         {
-                            echo "<tr>";
-                            for ($j = 0; $j < $n; $j++)
-                            {
-                                echo "<td>$liczby[$x]</td>";
-                                $x++;
-                            }
-                            echo "</tr>";
+                            $wartosc = $tablica[$i][$j];
+                            echo "<td>" . (is_float($wartosc) ? number_format($wartosc, 2) : $wartosc) . "</td>";
                         }
-                        echo "</table>";
-
-                        $suma = 0;
-                        for($i = 0; $i < $m; $i++)
-                            $suma += $lichoczby[$i][$liwier];
-
-                        echo "Suma wartości w wierszu $liwier: $suma";
+                        echo "</tr>";
                     }
+                    echo "</table>";
+
+                    $suma = 0;
+                    for ($j = 0; $j < $m; $j++) {
+                        $suma += $tablica[$liwier][$j];
+                    }
+
+                    echo "Suma wartości w wierszu $liwier wynosi: " . number_format($suma, 2) . "<br>";
                 }
             }
-            else
-                echo "Numer wiersza musi być w zakresie 0 do n-1";
         }
     }
     ?>
