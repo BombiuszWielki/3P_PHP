@@ -1,0 +1,71 @@
+*
+{
+    font-family: Georgia;
+}
+
+#baner1, #baner2
+{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 50%;
+    float: left;
+}
+
+#menu
+{
+    background-color: navy;
+    padding: 20px;
+    clear: both;
+}
+
+label
+{
+    color: silver;
+    margin: 50px;
+}
+label:hover
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#blokLewy, #blokPrawy
+{
+    background-color: azure;
+    height: 550px;
+    float: left;
+}
+#blokLewy
+{
+    width: 70%;
+}
+#blokPrawy
+{
+    width: 30%;
+}
+
+#stopka
+{
+    background-color: navy;
+    color: white;
+    clear: both;
+}
+
+table
+{
+    border: solid 1px navy;
+    margin: auto;
+    width: 70%;
+}
+
+tr:hover
+{
+    background-color: skyblue;
+}
+
+#blokPrawy img
+{
+    width: 90%;
+}

@@ -1,0 +1,4 @@
+z1: SELECT nazwa, rzeka, stanAlarmowy FROM wodowskazy;
+z2: SELECT w.nazwa, w.stanOstrzegawczy, w.stanAlarmowy, p.stanWody FROM wodowskazy AS w JOIN pomiary AS p ON w.id = p.id WHERE p.dataPomiary = '2022-05-05';
+z3: SELECT w.nazwa, w.stanOstrzegawczy, w.stanAlarmowy, p.stanWody FROM wodowskazy AS w JOIN pomiary AS p ON w.id = p.id WHERE p.dataPomiary = '2022-05-05' AND p.stanWody > w.stanOstrzegawczy;
+z4: SELECT dataPomiaru, AVG(stanWody) AS sredniStanWody FROM pomiary GROUP BY dataPomiaru;
